@@ -9,6 +9,8 @@
 		"DavidAnson.vscode-markdownlint", // MARKDOWNLINT
 		"Chanzhaoyu.svelte-5-snippets", // SVELTE 5 SNIPPETS
 		"vscode-icons-team.vscode-icons", // VSCODE ICONS
+		"prisma.prisma", // PRISMA
+		"mikestead.dotenv", // DOTENV
 		// TAILWIND EXTENSIONS:
 		"heybourn.headwind", // HEADWIND
 		"bradlc.vscode-tailwindcss", // TAILWIND CSS INTELLISENSE
