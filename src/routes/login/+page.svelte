@@ -17,5 +17,5 @@
 	};
 </script>
 
-<button onclick={githubLogin}> Login with GitHub </button>
-<button onclick={googleLogin}> Login with Google </button>
+<button onclick={githubLogin}> LOGIN WITH GITHUB </button>
+<button onclick={googleLogin}> LOGIN WITH GOOGLE </button>

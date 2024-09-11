@@ -22,8 +22,8 @@ const { handle: handleAuthjs } = SvelteKitAuth({
 	],
 });
 
-export const handleCustomizado: Handle = async ({ event, resolve }) => {
+export const handleCustomized: Handle = async ({ event, resolve }) => {
 	return resolve(event);
 };
 
-export const handle = sequence(handleAuthjs, handleCustomizado);
+export const handle = sequence(handleAuthjs, handleCustomized);

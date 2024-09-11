@@ -4,7 +4,7 @@
 </script>
 
 {#if !$page.data.session}
-	<a href="/login"> Sign in </a>
+	<a href="/login"> SIGN IN </a>
 {:else}
 	<button
 		onclick={() => {
@@ -13,6 +13,6 @@
 			});
 		}}
 	>
-		Sign out
+		SIGN OUT
 	</button>
 {/if}

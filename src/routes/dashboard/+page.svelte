@@ -5,6 +5,6 @@
 </script>
 
 {#if data.session}
-	<h1>Dashboard</h1>
-	Welcome back, {data.session.user?.name}!
+	<h1>DASHBOARD</h1>
+	WELCOME BACK, {data.session.user?.name}!
 {/if}
