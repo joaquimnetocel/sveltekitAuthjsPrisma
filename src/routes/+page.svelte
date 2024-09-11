@@ -1,2 +1,10 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import { page } from '$app/stores';
+</script>
+
+<h1>Home Page</h1>
+{#if $page.data.session}
+	<div>
+		Welcome back, {$page.data.session.user?.name}!
+	</div>
+{/if}
