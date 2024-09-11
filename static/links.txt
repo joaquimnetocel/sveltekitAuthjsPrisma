@@ -1,0 +1,3 @@
+https://github.com/PrabhuKiran8790/sveltekit-authjs-prisma-template
+https://prabhukirankonda.vercel.app/writing/authjs-sveltekit-prisma
+https://prabhukirankonda.medium.com/integrating-auth-js-nextauth-and-prisma-with-sveltekit-bfdc54fb25b8
