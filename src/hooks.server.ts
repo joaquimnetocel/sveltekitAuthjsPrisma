@@ -17,8 +17,16 @@ const { handle: handleAuthjs } = SvelteKitAuth({
 		},
 	},
 	providers: [
-		GitHub({ clientId: GITHUB_ID, clientSecret: GITHUB_SECRET }),
-		Google({ clientId: GOOGLE_ID, clientSecret: GOOGLE_SECRET }),
+		GitHub({
+			clientId: GITHUB_ID,
+			clientSecret: GITHUB_SECRET,
+			allowDangerousEmailAccountLinking: true,
+		}),
+		Google({
+			clientId: GOOGLE_ID,
+			clientSecret: GOOGLE_SECRET,
+			allowDangerousEmailAccountLinking: true,
+		}),
 	],
 });
 
