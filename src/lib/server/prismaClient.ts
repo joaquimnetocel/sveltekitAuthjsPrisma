@@ -1,10 +1,9 @@
 import { PrismaClient } from '@prisma/client';
-// OU: import { PrismaClient } from '@prisma/client/edge'
 
-const prismaClient = global.prismaClient || new PrismaClient();
+const globalForPrisma = globalThis as unknown as { prismaClient: PrismaClient };
 
-if (process.env.NODE_ENV === 'development') {
-	global.prismaClient = prismaClient;
-}
+const prismaClient = globalForPrisma.prismaClient || new PrismaClient();
+
+if (process.env.NODE_ENV !== 'production') globalForPrisma.prismaClient = prismaClient;
 
 export { prismaClient };

@@ -1,2 +1,8 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	import SignButton from '$lib/components/SignButton.svelte';
+</script>
+
+<ul>
+	<li><a href="/logado">LOGADO</a></li>
+	<li><SignButton propRedirect="/logado" /></li>
+</ul>
