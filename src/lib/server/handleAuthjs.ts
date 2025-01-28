@@ -2,7 +2,8 @@ import {
 	AUTH_GITHUB_ID,
 	AUTH_GITHUB_SECRET,
 	AUTH_GOOGLE_ID,
-	AUTH_GOOGLE_SECRET
+	AUTH_GOOGLE_SECRET,
+	AUTH_SECRET
 } from '$env/static/private';
 import { prismaClient } from '$lib/server/prismaClient';
 import type { Adapter } from '@auth/core/adapters';
@@ -12,13 +13,14 @@ import Google from '@auth/sveltekit/providers/google';
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
 
 export const { handle: handleAuthjs } = SvelteKitAuth({
-	adapter: PrismaAdapter(prismaClient) as Adapter,
-	session: {
-		strategy: 'database',
-		generateSessionToken: () => {
-			return crypto.randomUUID(); // generate a uuid
-		}
-	},
+	// adapter: PrismaAdapter(prismaClient) as Adapter,
+	// session: {
+	// 	strategy: 'database',
+	// 	generateSessionToken: () => {
+	// 		return crypto.randomUUID(); // generate a uuid
+	// 	}
+	// },
+	secret: AUTH_SECRET,
 	providers: [
 		Google({
 			clientId: AUTH_GOOGLE_ID,
